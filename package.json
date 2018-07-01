@@ -6,7 +6,6 @@
   "engines": {
     "node": "8.11.3"
   },
-
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -14,9 +13,9 @@
   },
   "author": "Mark Robertson",
   "license": "MIT",
-
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "password-generator": "^2.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.5"

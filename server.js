@@ -1,16 +1,27 @@
 const express = require('express');
+const path = require('path');
+const generatePassword = require('password-generator');
 
 const app = express();
 
-const PORT = process.env.PORT || 5000;
+app.use(express.static(path.join(__dirname, 'client/build')));
 
-app.get('/api/customers', (req, res) => {
-    const customers = [
-        {id: 1, firstName: 'Mark', lastName: 'Robertson'},
-        {id: 2, firstName: 'Graeme', lastName: 'Robertson'}
-    ];
+app.get('/api/passwords', (req, res) => {
+    const count = 5;
 
-    res.json(customers);
+    const passwords = Array.from(Array(count).keys()).map(i => generatePassword(12, false)
+    )
+
+    res.json(passwords)
+
+    console.log(`Sent ${count} passwords`);
 });
 
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+
+const port = process.env.PORT || 5000;
+app.listen(port);
+
+console.log(`Listening on ${port}`);
