@@ -1,6 +1,7 @@
 {
   "name": "website",
   "version": "1.0.0",
+  "homepage": "http://mrobertson.ca/",
   "description": "boilerplate for React and Express",
   "engines": {
     "node": "8.11.3"
