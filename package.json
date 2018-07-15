@@ -1,23 +1,26 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "homepage": "http://mrobertson.ca/",
-  "description": "boilerplate for React and Express",
+  "homepage": "https://github.com/RobertsonMark/website-mrobertson#readme",
+  "description": "",
   "engines": {
     "node": "8.11.3"
   },
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertsonMark/website-mrobertson.git"
   },
   "author": "Mark Robertson",
   "license": "MIT",
-  "dependencies": {
-    "express": "^4.16.3",
-    "password-generator": "^2.2.0"
+  "bugs": {
+    "url": "https://github.com/RobertsonMark/website-mrobertson/issues"
   },
-  "devDependencies": {
-    "nodemon": "^1.17.5"
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
   }
 }
