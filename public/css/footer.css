@@ -1,0 +1,15 @@
+.footer {
+  background-color: #444;
+  padding: 0px;
+}
+
+.icons li a img {
+  vertical-align: middle;
+  padding: 5px;
+  height: 50px;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
